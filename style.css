@@ -37,18 +37,19 @@ body{
     align-items: center;
     justify-content: center;   
     font-family:Verdana; 
-    font-size: smaller;
+    font-size: 50px;
+
 
 }
 
 .convite-frase span{
     display: block;
-    font-size: 1.5rem;
+    font-size: 2px;
     text-align: center;
     opacity: 0;
     animation: aparecer 0.5s forwards var(--d); 
-    font-size: 1.9rem
-    
+     
+     font-size: 1.5rem; 
     
 }
 
@@ -57,12 +58,12 @@ body{
 }
 
 .iniciar-quiz{
-    font-size: 25px;
-    font-weight: 900;
+    font-size: 15px;
+    font-weight: 90;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: blueviolet;
     cursor: pointer;
-    padding: 10px;
+    padding: 7px;
     margin: 5px;
     background-color: burlywood;
     border-radius: 10px;
@@ -166,10 +167,9 @@ input[type="radio"]{
     visibility: hidden;
     opacity: 0; 
     position: absolute;
-    background-color: #f9fff5;
     width: 100%;
     height: 100%;
-    transition: 1s;
+    transition: 5s;
     /*colocar no atraves do js transition de 1s*/
 }
 
