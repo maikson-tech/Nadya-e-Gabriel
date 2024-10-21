@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem como background</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>convite para alguma coisa</title>
+    <link rel="shortcut icon" href="./download.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./aos.js" defer></script>
+    <title>Fonte com css</title>
+    <style>
+        h1{
+        text-align: center;
+        font-family: verdana;
+        font-size: 1.2rem
+
+
+
+        
+    }
+    
+    </style>
+   
+    
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+    }
+    body {
+        width: 100vw;
+        height: 100vw;
+        background-image: url(./plano-bonito-colocar-plano-de-fundo-do-conceito-de-casamento-ou-dia-dos-namorados_57839-133.avif);
+        background-size: 60%;
+        background-repeat: ;
+    }
+</style>
+<body>
+    <div class="convite-container">
+        <div class="convite-card">
+            <img class="img-front" src="./rafael.jpeg">
+        </div>
+    </div>
+    <main>
+        <section class="convite">
+            <p class="convite-frase">
+              
+                <span style="--d: 1s">Olá Nadya e Gabriel</span>
+                <span style="--d: 2s">Esse site é para lhe convidar para algo muito especial.</span>
+                <span style="--d: 3s">Mas o que será esse algo?</span>
+                <span style="--d: 4s">Você precisara resolver um pequeno quiz de afinidade <span class="tema-quiz"><img src="./OIP.jpeg"></span> para descobrir...</span>
+           
+            </p>
+            <button type="button" class="iniciar-quiz" style="--d: 5s" onclick="iniciar()">Vamos começar</button>
+        </section>
+        <form class="formulario">
+            <fieldset class="ques1">
+                <legend> Qual dos noivos e mais estressado?</legend>
+                <div class="opcoes">
+                    <div class="input-radio">
+                        <input type="radio" id="select1" name="q1" value="1" onchange="confere1()">
+                        <label for="select1">Ele</label>
+                    </div>
+                   
+                    <div class="input-radio">
+                        <input type="radio" id="select3" name="q1" value="3" onchange="confere1()">
+                        <label for="select3">Ela</label>
+                    </div>
+                    
+                </div>
+            </fieldset>
+            <fieldset class="ques2" style="--d: 1s">
+                <legend> A quanto tempo se conhecem?</legend>
+                <div class="opcoes">
+                    <div class="input-radio">
+                        <input type="radio" id="select5" name="q2" value="1" onchange="confere2()">
+                        <label for="select5">5 anos </label>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" id="select6" name="q2" value="2" onchange="confere2()">
+                        <label for="select6"> 6 anos </label>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" id="select7" name="q2" value="3" onchange="confere2()">
+                        <label for="select7">10 anos </label>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" id="select8" name="q2" value="4" onchange="confere2()">
+                        <label for="select8">12 meses</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="ques3" style="--d: 1s">
+                <legend> Onde se viram pela primeira vez?</legend>
+                <div class="opcoes">
+                    <div  class="input-radio">
+                        <input type="radio" id="select9" name="q3" value="1" onchange="confere3()">
+                        <label for="select9"> Padaria</label>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" id="select10" name="q3" value="2" onchange="confere3()">
+                        <label for="select10"> Em baixo da cama</label>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" id="select11" name="q3" value="3" onchange="confere3()">
+                        <label for="select11">Chacara da Nininha</label>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" id="select12" name="q3" value="4" onchange="confere3()">
+                        <label for="select12">Andando de 50tinha</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="ques4" style="--d: 1s">
+                <legend>Quem fala dormindo?</legend>
+                <div class="opcoes">
+                    <div class="input-radio">
+                        <input type="radio" id="select13" name="q4" value="1" onchange="confere4()">
+                        <label for="select13">Ela</label>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" id="select14" name="q4" value="2" onchange="confere4()">
+                        <label for="select14">Ele</label>
+                    </div>
+                   
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>

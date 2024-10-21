@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+    --cor01: #141a12;
+    --cor02: #dbe0b9;
+    --cor03: #e8ebe8;
+    --cor04: #df7d5f;
+    --cor05: #e48d0a;
+    --mainFont: 'Playfair Display', serif;
+    --d: 0s;
+    --sombra: rgba(248, 5, 5, 0.34);
+    font-weight: 600;
+    font-family: serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--mainFont);
+    /* border: 1px solid red; */
+}
+
+body{
+    background-color: var(--cor01);
+    height: 100vh;
+    width: 100vw;
+    /*
+    atraves do js. qunado o convite aparecer tranformar overflow hidden
+    */
+}
+
+.convite{
+    height: 100vh;
+    width: 100vw;
+    display: flex; /*none*/ /*flex*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    font-family:Verdana; 
+    font-size: smaller;
+
+}
+
+.convite-frase span{
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    opacity: 0;
+    animation: aparecer 0.5s forwards var(--d); 
+    font-size: 1.9rem
+    
+    
+}
+
+.tema-quiz img{
+    height: 6rem;
+}
+
+.iniciar-quiz{
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: blueviolet;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    background-color: burlywood;
+    border-radius: 10px;
+    outline: none;
+    border: #260101;
+    box-shadow: 0px 0px 5px var(--sombra);
+    transition: var(--cor02);
+    opacity: 0;
+    animation: aparecer 0.2s forwards var(--d);
+    font-family: cursive;
+
+    
+}
+.iniciar-quiz:hover{
+    transform: scale(1.1);
+    
+}
+
+.formulario{
+    width: 100vw;
+    display: none; /*flex*/
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+fieldset{
+    width: 80%;
+    max-width: 700px;
+    border: 2px solid var(--cor05);
+    border-radius: 20px;
+}
+
+legend{
+    background-color: var(--cor04);
+    padding: 3px 20px;
+    text-align: center;
+    border-radius: 20px;
+    color: var(--cor01);
+}
+
+.opcoes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    min-height: 60px;
+    margin: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--cor02);
+}
+
+input[type="radio"]{
+    opacity: 0;
+    position: absolute;
+}
+
+.input-radio label{
+    width: auto;
+    cursor: pointer;
+    background-color: var(--cor03);
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: var(--cor01);
+    transition: 1s;
+}
+.input-radio label span{
+    text-align: center;
+}
+.input-radio:hover label{
+    background-color: var(--cor05);
+}
+
+
+.ques1{
+    margin-top: 50px;
+}
+.ques2{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.ques3{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.ques4{
+    margin-bottom: 50px;
+    visibility: hidden;
+    opacity: 0;
+}
+/* f9fff5 */
+
+
+.convite-container{
+    visibility: hidden;
+    opacity: 0; 
+    position: absolute;
+    background-color: #f9fff5;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    /*colocar no atraves do js transition de 1s*/
+}
+
+.convite-card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.img-front{
+    width: 95%; /*mobile 90vw*/ /*pc 100%*/
+    max-height: 660px;
+    border-radius: 20px;
+    border: 1px solid var(--cor02);
+    transition: 1s;
+    transform-style: preserve-3d;
+    transform-origin: center;   
+    transform: rotate3d(-1, 1, 0, 20deg);
+    animation: float-convite 15s ease-in-out infinite; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.291);  
+    /* animation: aparece-convite 6s ease-out; */  
+}
+
+.convite-appear{
+    animation: aparece-convite 4s ease-out;
+}
+.convite-float{
+    transform: rotate3d(-1, 1, 0, 20deg);
+    animation: float-convite 10s ease-in-out infinite; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.291); 
+}
+
+
+@keyframes float-convite{
+    0%{
+        transform: rotate3d(1, -1, 0, 20deg);
+    }
+    25%{
+        transform: rotate3d(1, 1, 0, 20deg);
+    }
+    50%{
+        transform: rotate3d(-1, 1, 0, 20deg);
+    }
+    75%{
+        transform: rotate3d(-1, -1, 0, 20deg);
+    }
+    100%{
+        transform: rotate3d(1, -1, 0, 20deg);
+    }
+}
+
+@keyframes aparece-convite{
+    0%{
+        transform: rotate3d(0,0,0,0deg) scale(0.1);
+    }70%{
+        transform: rotate3d(1, 1, 1, 1440deg) scale(1);
+    }100%{
+        transform: rotate3d(-1, 1, 0, 20deg);
+    }
+}
+
+.aparece{
+    animation: aparecer 0.5s forwards var(--d);
+}
+
+@keyframes aparecer{
+    from{
+        transform: translateY(20px);
+    }to{
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.error{
+    animation: errou 0.5s forwards;
+}
+
+@keyframes errou{
+    0%{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0 0 10px rgb(255, 0, 0);
+    }
+    100%{
+        box-shadow: none;
+    }
+}
+
+.acerto{
+    animation: acertou 0.5s forwards;
+}
+
+@keyframes acertou{
+    0%{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0 0 10px rgb(0, 221, 0);
+    }
+    100%{
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 1000px){
+
+    .img-front{
+        width: 70vw;
+    }
+}
+
+@media (max-width: 700px){
+    .img-front{
+        width: 80vw;
+    }
+}
+@media (max-width: 500px){
+    fieldset{
+        width: 85%;
+    }
+    .img-front{
+        width: 85vw;
+    }
+}
+
+@media (max-width: 420px){
+    .convite{
+        margin: auto;
+        width: 95vw;
+    }
+    fieldset{
+        width: 95%;
+    }
+    .convite-card{
+        top: 45%;
+    }
+    .img-front{
+        width: 96vw;
+    }
+}
